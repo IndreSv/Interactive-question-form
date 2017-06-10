@@ -9,25 +9,25 @@
     <title>Webpage</title>
 </head>
 
-<body ng-app = "myApp">
+<body ng-app = "myApp"  ng-controller="mainCtrl">
     <div id="topheader">
         <h1>Simple survey about investments</h1>
     </div>
     <div id="description">
         <p>This survey contains of 5 questions and would take around 5 minutes to answer it. Thank you for taking time for it!
         </p>
-        <button type="button">Start the survey</button>
+        <button ng-click="myFunc()" type="button">Start the survey</button>
         <form>
-            <div id="question1" ng-controller="mainCtrl">
+            <div id="question1">
                 How long term is your savings goal?
                 <input type="radio" name="firstQuestion"> 1 - 3 months<br>
                 <input type="radio" name="firstQuestion"> 3 - 6 months<br>
                 <input type="radio" name="firstQuestion"> 6 months - 1 year<br>
                 <input type="radio" name="firstQuestion"> 1 - 2 years<br>
                 <input type="radio" name="firstQuestion"> More than 2 years
-                <button type="button" ng-click="test()">Next question</button>
+                <button type="button">Next question</button>
             </div>
-            <div id="question2">
+            <div ng-show = "showMe" id="question2">
                 What is your main goal of savings?
                 <input type="radio" name="secondQuestion"> A car<br>
                 <input type="radio" name="secondQuestion"> A house (or other type of accomodation)<br>
