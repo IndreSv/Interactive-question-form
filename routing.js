@@ -1,6 +1,7 @@
 var app = angular.module('myApp');
 
-.config(['$stateProvider', function ($stateProvider) {
+
+app.config(['$stateProvider', function ($stateProvider) {
        var intro = {
                name: 'intro',
                url: '/',
@@ -9,7 +10,7 @@ var app = angular.module('myApp');
            first = {
                name: 'first',
                url: '/1',
-               parent: intro,
+               //parent: intro,
                templateUrl: 'index.html'
            },
            second = {

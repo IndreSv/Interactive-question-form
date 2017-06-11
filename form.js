@@ -1,17 +1,17 @@
-var app = angular.module('myApp', []);
+var app = angular.module('myApp', ['ngRoute']);
+
+// app.controller('mainCtrl', ['$scope', function($scope) {
+//     $scope.showMe = false;
+//     $scope.myFunc = function() {
+//         $scope.showMe = ! $scope.showMe;
+//     }
+// }]);
 
 app.controller('mainCtrl', ['$scope', function($scope) {
-    $scope.showMe = false;
-    $scope.myFunc = function() {
-        $scope.showMe = ! $scope.showMe;
-    }
+$scope.startApp = function () {
+    $state.go('first');
+}
 }]);
-
-// app.controller('answers', function($scope) {
-//   var summary = ("");
-// });
-
-
 
 // TODO:
 // - Unhide questions one by one (and hide previous one)
