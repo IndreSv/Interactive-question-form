@@ -10,7 +10,7 @@ app.config(['$stateProvider', function ($stateProvider) {
            first = {
                name: 'first',
                url: '/1',
-               //parent: intro,
+               parent: intro,
                templateUrl: 'index.html'
            },
            second = {
