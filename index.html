@@ -1,67 +1,27 @@
 <!DOCTYPE html>
 <html>
 <!-- <script src="/node_modules/angular/angular.js"></script> -->
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link type="text/css" rel="stylesheet" href="stylesheet.css" />
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
-<script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
+    <script src="//unpkg.com/angular-ui-router/release/angular-ui-router.min.js"></script>
     <script type="text/javascript" src="form.js"></script>
     <script type="text/javascript" src="routing.js"></script>
     <title>Webpage</title>
 </head>
-<body ui-view ng-app="myApp" ng-controller="mainCtrl">
+
+<body ng-app="myApp" ng-controller="mainCtrl">
     <div id="topheader">
         <h1>Simple survey about investments</h1>
     </div>
     <div id="description">
-      <div ui-sref="intro">
-        <p>This survey contains of 5 questions and would take around 5 minutes to answer it. Thank you for taking time for it!
-        </p>
-        <button ng-click="nextq()" type="button">Start the survey</button>
-      </div>
-        <form>
-            <div ui-sref="first" id="question1">
-                How long term is your savings goal?
-                <input type="radio" name="firstQuestion"> 1 - 3 months<br>
-                <input type="radio" name="firstQuestion"> 3 - 6 months<br>
-                <input type="radio" name="firstQuestion"> 6 months - 1 year<br>
-                <input type="radio" name="firstQuestion"> 1 - 2 years<br>
-                <input type="radio" name="firstQuestion"> More than 2 years
-                <button ng-click="nextq()" type="button">Next question</button>
-            </div>
-            <div ui-sref="second" id="question2">
-                What is your main goal of savings?
-                <input type="radio" name="secondQuestion"> A car<br>
-                <input type="radio" name="secondQuestion"> A house (or other type of accomodation)<br>
-                <input type="radio" name="secondQuestion"> Vacations<br>
-                <input type="radio" name="secondQuestion"> Other
-                <button type="button">Previous question</button>
-                <button ng-click="nextq()" type="button">Next question</button>
-            </div>
-            <div ui-sref="third" id="question3">
-                What amount are you planning to save per month?
-                <input type="radio" name="thirdQuestion"> Less than 50 EUR<br>
-                <input type="radio" name="thirdQuestion"> 50 - 100 EUR<br>
-                <input type="radio" name="thirdQuestion"> 101 - 200 EUR<br>
-                <input type="radio" name="thirdQuestion"> 201 - 400 EUR<br>
-                <input type="radio" name="thirdQuestion"> More than 400 EUR
-                <button type="button">Previous question</button>
-                <button ng-click="nextq()" type="button">Next question</button>
-            </div>
-            <div ui-sref="fourth" id="question4">
-                Do you have any loans?
-                <input type="radio" name="fourthQuestion"> Yes<br>
-                <input type="radio" name="fourthQuestion"> No
-                <button type="button">Previous question</button>
-                <button ng-click="nextq()" type="button">Next question</button>
-            </div>
-            <div ui-sref="fith" id="question5">
-                Do you have any other financial commitments?
-                <button type="button">Previous question</button>
-                <button type="button">Finish the survey</button>
-            </div>
-        </form>
+        <div ui-view="intro">
+            <p>This survey contains of 5 questions and would take around 5 minutes to answer it. Thank you for taking time for it!
+            </p>
+            <button ng-click="nextq()" type="button">Start the survey</button>
+        </div>
     </div>
 </body>
 

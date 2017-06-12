@@ -14,7 +14,7 @@ app.controller('mainCtrl', function($scope, $state) {
 $scope.nextq = function () {
   $scope.currentIndex = $scope.currentIndex+1;
   var name = $scope.tabs[$scope.currentIndex];
-  $state.go( name );
+  $state.go(name);
 }
 });
 
