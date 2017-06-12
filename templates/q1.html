@@ -1,5 +1,5 @@
 <form>
-<div  ng-controller="check" id="question1">
+<div  "check" id="question1">
     1. How long term is your savings goal?
     <input type="radio" ng-model="value" value="one" ng-change="checkStuff()" name="firstQuestion"> 1 - 3 months<br>
     <input type="radio" ng-model="value" value="two" ng-change="checkStuff()" name="firstQuestion"> 3 - 6 months<br>
@@ -11,5 +11,11 @@
 </div>
 </form>
 
-
+<!-- <form name="myForm" ng-controller="MyCtrl" ng-submit="submitForm()">
+   <label><input type="radio" name="test" ng-model="radioValue" value="1"/> One</label>
+   <label><input type="radio" name="test" ng-model="radioValue" value="2"/> Two</label>
+   <label><input type="radio" name="test" ng-model="radioValue" value="3"/> Three</label>
+   <div>currently selected: {{radioValue}}</div>
+   <button type="submit">Submit</button>
+</form> -->
     <!-- <span> {{value}} isCheck:{{isChecked}} </span> -->
