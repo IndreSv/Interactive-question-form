@@ -1,11 +1,5 @@
 var app = angular.module('myApp', ['ui.router']);
 
-// app.controller('mainCtrl', ['$scope', function($scope) {
-//     $scope.showMe = false;
-//     $scope.myFunc = function() {
-//         $scope.showMe = ! $scope.showMe;
-//     }
-// }]);
 
 app.controller('mainCtrl', function($scope, $state) {
   $scope.tabs = ['intro', 'first', 'second', 'third', 'fourth', 'fith', 'summary'];
@@ -15,6 +9,15 @@ $scope.nextq = function () {
   var name = $scope.tabs[$scope.currentIndex];
   $state.go(name);
 }
+});
+
+
+app.controller('check', function MyCtrl($scope) {
+  $scope.value = "none" ;
+  $scope.isChecked = false;
+  $scope.checkStuff = function () {
+      $scope.isChecked = !$scope.isChecked;
+  }
 });
 
 // TODO:
