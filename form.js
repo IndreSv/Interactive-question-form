@@ -23,7 +23,7 @@ app.directive('check', function() {
         }
     };
 });
-// 
+//
 // app.directive('getValue', function() {
 //         return {
 //             controller: function($scope) {
