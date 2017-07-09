@@ -6,8 +6,9 @@
     <input type="radio" ng-model="value" value="three" ng-change="checkStuff()" name="firstQuestion"> 6 months - 1 year<br>
     <input type="radio" ng-model="value" value="four" ng-change="checkStuff()" name="firstQuestion"> 1 - 2 years<br>
     <input type="radio" ng-model="value" value="five" ng-change="checkStuff()" name="firstQuestion"> More than 2 years
-    <button ng-click="nextq()" type="submit">Next question</button>
-    <span> {{value}} isCheck:{{isChecked}} </span>
+    <button  ng-click="nextq()" type="submit">Next question</button>
+    <!-- <span> {{value}} isCheck:{{isChecked}} </span> -->
+    <pre id="test" ng-model="answer1" ng-bind-template="{{value}}"></pre>
 </div>
 </form>
 

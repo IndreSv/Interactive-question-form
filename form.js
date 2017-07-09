@@ -23,18 +23,17 @@ app.directive('check', function() {
         }
     };
 });
-//
-// app.directive('getValue', function() {
-//         return {
-//             controller: function($scope) {
-//                 $scope.change = 'data';
-//                 $scope.getVal = function() {
-//                     console.log($scope.value);
-//                     $scope.change = $scope.value;
-//                 }
-//             }
-//         }
-//     });
+
+//try this: https://docs.angularjs.org/api/ng/directive/ngValue ?
+
+// app.controller('Add', function(){
+//    var vm = this;
+//    vm.answers = [];
+//    vm.Add = function() {
+//      vm.answers.push({value});
+//      console.log(vm.answers);
+//    }
+// });
 
             // TODO:
             // - Unhide questions one by one (and hide previous one)
