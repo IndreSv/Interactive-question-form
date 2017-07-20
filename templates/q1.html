@@ -1,13 +1,15 @@
 <form>
-<div  "check" id="question1" ng-controller="test">
+  <div ng-controller="mainCtrl">
+<div id="question1" ng-controller="newctrl">
     1. How long term is your savings goal?
-    <input type="text" ng-model="answer"><br>
+    <input type="number" ng-model="number"><br>
     <!-- <input type="radio" ng-model="value" value="two" ng-change="checkStuff()"> 3 - 6 months<br>
     <input type="radio" ng-model="value" value="three" ng-change="checkStuff()"> 6 months - 1 year<br>
     <input type="radio" ng-model="value" value="four" ng-change="checkStuff()"> 1 - 2 years<br>
     <input type="radio" ng-model="value" value="five" ng-change="checkStuff()"> More than 2 years -->
-    <button  ng-click="nextq()" type="submit">Next question</button>
+    <button  ng-click="findSquare(); nextq()" type="submit">Next question</button>
     <!-- <span> {{value}} isCheck:{{isChecked}} </span> -->
-    <span ng-bind="answer"></span>
+    <div>{{answer}}</div>
+</div>
 </div>
 </form>
