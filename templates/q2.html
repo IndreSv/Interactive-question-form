@@ -1,9 +1,11 @@
-<div id="question2">
+<form>
+<div id="question2" ng-controller='mainCtrl'>
     2. What is your main goal of savings?
     <input type="radio" ng-model="answer1" name="secondQuestion"> A car<br>
     <input type="radio" name="secondQuestion"> A house (or other type of accomodation)<br>
     <input type="radio" name="secondQuestion"> Vacations<br>
     <input type="radio" name="secondQuestion"> Other
     <button type="button">Previous question</button>
-    <button ng-click="nextq()" type="button">Next question</button>
+    <button ng-click="nextq()" type="submit">Next question</button>
 </div>
+</form>
