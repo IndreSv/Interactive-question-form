@@ -1,11 +1,14 @@
 <form >
-<div id="question2" ng-controller='thirdQ'>
-    2. What is the main goal of your savings?
-    <input type="radio" name="secondQuestion"> A car<br>
-    <input type="radio" name="secondQuestion"> A house (or other type of accomodation)<br>
-    <input type="radio" name="secondQuestion"> Vacations<br>
-    <input type="radio" name="secondQuestion"> Other
+  <div ng-controller='thirdQ'>
+<div id="question2" ng-controller='newctrl'>
+    What is the main goal of your savings?
+    <input type="text" ng-model="answer2">
+    <!-- <input type="radio" name="secondQuestion" ng-model="answer2"> A car<br>
+    <input type="radio" name="secondQuestion" ng-model="answer2"> A house (or other type of accomodation)<br>
+    <input type="radio" name="secondQuestion" ng-model="answer2"> Vacations<br>
+    <input type="radio" name="secondQuestion" ng-model="answer2"> Other -->
     <button type="button">Previous question</button>
     <button ng-click="nextq()" type="submit">Next question</button>
+</div>
 </div>
 </form>

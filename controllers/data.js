@@ -7,10 +7,9 @@ newController.$inject = [
 
 function newController($scope, storeData) {
   $scope.saveAnswer = function() {
-      storeData.setData($scope.answer1);
+     storeData.setData($scope.answer1);
   }
   $scope.getAnswer = function() {
     $scope.answer1 = storeData.getData();
-    console.log($scope.answer1)
   }
    }
