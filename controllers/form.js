@@ -11,12 +11,41 @@ var app = angular.module('myApp', ['ui.router']);
 //     }
 // });
 
-app.controller('mainCtrl', function($scope, $state) {
+app.controller('firstQ', function($scope, $state) {
+    $scope.nextq = function() {
+        $state.go('first');
+    }
+});
+
+app.controller('secondQ', function($scope, $state) {
     $scope.nextq = function() {
         $state.go('second');
     }
 });
 
+app.controller('thirdQ', function($scope, $state) {
+    $scope.nextq = function() {
+        $state.go('third');
+    }
+});
+
+app.controller('fourthQ', function($scope, $state) {
+    $scope.nextq = function() {
+        $state.go('fourth');
+    }
+});
+
+app.controller('fifthQ', function($scope, $state) {
+    $scope.nextq = function() {
+        $state.go('fith');
+    }
+});
+
+app.controller('summaryView', function($scope, $state) {
+    $scope.nextq = function() {
+        $state.go('summary');
+    }
+});
 
 // TODO:
 // - Validations (if "next" clicked without choosing option)

@@ -1,6 +1,6 @@
-<form ng-controller="newctrl" ng-init="getAnswer()">
-<div id="question2" ng-controller='mainCtrl'>
-    2. What is your main goal of savings?
+<form >
+<div id="question2" ng-controller='thirdQ'>
+    2. What is the main goal of your savings?
     <input type="radio" name="secondQuestion"> A car<br>
     <input type="radio" name="secondQuestion"> A house (or other type of accomodation)<br>
     <input type="radio" name="secondQuestion"> Vacations<br>
@@ -8,6 +8,4 @@
     <button type="button">Previous question</button>
     <button ng-click="nextq()" type="submit">Next question</button>
 </div>
-<!-- <button ng-controller="newctrl" ng-click="getAnswer()">test</button> -->
-<div ng-model="answer1">{{answer1}}</div>
 </form>
