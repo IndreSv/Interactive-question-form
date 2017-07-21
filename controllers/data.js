@@ -8,13 +8,9 @@ newController.$inject = [
 function newController($scope, storeData) {
   $scope.saveAnswer = function() {
       storeData.setData($scope.answer1);
-      console.log($scope.answer1);
+  }
+  $scope.getAnswer = function() {
+    $scope.answer1 = storeData.getData();
+    console.log($scope.answer1)
   }
    }
-
-
-// function newController($scope, CalculatorService) {
-//   $scope.findSquare = function () {
-//      $scope.answer = CalculatorService.square($scope.number);
-//    }
-// }

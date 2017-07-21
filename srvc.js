@@ -1,12 +1,3 @@
-
-// angular.module('myApp')
-//     .service('CalculatorService', function() {
-//         this.square = function(a) {
-//             return a * a
-//         };
-//     });
-
-
 angular.module('myApp')
     .factory('storeData', function() {
         var answer1 = '';
@@ -24,3 +15,21 @@ answer1 = a;
             setData: setData
         }
     })
+
+
+  //  angular.module('myApp')
+  //      .factory('storeData', function() {
+  //          var answer1 = 'tiu';
+  //          return {
+  //              getData: getData,
+  //              setData: setData
+  //          };
+   //
+  //          function getData() {
+  //              return answer1;
+  //          }
+   //
+  //          function setData(value) {
+  //              answer1 = value;
+  //          }
+  //      })
