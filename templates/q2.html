@@ -2,13 +2,13 @@
   <div ng-controller='thirdQ'>
 <div id="question2" ng-controller='newctrl'>
     What is the main goal of your savings?
-    <input type="text" ng-model="answer2">
+    <input type="text" ng-model="answer2" name="answer2">
     <!-- <input type="radio" name="secondQuestion" ng-model="answer2"> A car<br>
     <input type="radio" name="secondQuestion" ng-model="answer2"> A house (or other type of accomodation)<br>
     <input type="radio" name="secondQuestion" ng-model="answer2"> Vacations<br>
     <input type="radio" name="secondQuestion" ng-model="answer2"> Other -->
     <button type="button">Previous question</button>
-    <button ng-click="nextq()" type="submit">Next question</button>
+    <button ng-click="saveAnswer2(); nextq()"  type="submit">Next question</button>
 </div>
 </div>
 </form>

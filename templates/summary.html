@@ -1,5 +1,5 @@
 <div>Thank you for the responses. Below are your there are your answers displayed. We will get back to you as soon as possible.</div>
-<table ng-controller="newctrl" ng-init="getAnswer()">
+<table ng-controller="newctrl" ng-init="getAnswer1(); getAnswer2()">
 <tr>
 <th>Question</th>
 <th>Your answer</th>
@@ -10,7 +10,7 @@
 </tr>
 <tr>
 <th>What is the main goal of your savings?</th>
-<th>Your answer</th>
+<th ng-model="answer2">{{answer2}}</th>
 </tr>
 <tr>
 <th>What amount are you planning to save per month?</th>
