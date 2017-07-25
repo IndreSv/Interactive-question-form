@@ -1,12 +1,14 @@
 <form>
-<div id="question3" ng-controller='fourthQ'>
-    What amount are you planning to save per month?
-    <input type="radio" name="thirdQuestion"> Less than 50 EUR<br>
-    <input type="radio" name="thirdQuestion"> 50 - 100 EUR<br>
-    <input type="radio" name="thirdQuestion"> 101 - 200 EUR<br>
-    <input type="radio" name="thirdQuestion"> 201 - 400 EUR<br>
-    <input type="radio" name="thirdQuestion"> More than 400 EUR
+  <div ng-controller='fourthQ'>
+<div id="question3" ng-controller='newctrl'>
+    What is your main interest in foreign countries?
+    <input type="radio" name="thirdQuestion" ng-model="answer3" value="Nature">Nature<br>
+    <input type="radio" name="thirdQuestion" ng-model="answer3" value="Architecture">Architecture<br>
+    <input type="radio" name="thirdQuestion" ng-model="answer3" value="Culture">Culture<br>
+    <input type="radio" name="thirdQuestion" ng-model="answer3" value="History">History<br>
+    <input type="radio" name="thirdQuestion" ng-model="answer3" value="The beach">The beach
     <button type="button">Previous question</button>
-    <button ng-click="nextq()" type="submit">Next question</button>
+    <button ng-click="saveAnswer3(); nextq()" type="submit">Next question</button>
+</div>
 </div>
 </form>

@@ -1,14 +1,14 @@
-<form >
-  <div ng-controller='thirdQ'>
-<div id="question2" ng-controller='newctrl'>
-    What is the main goal of your savings?
-    <input type="text" ng-model="answer2" name="answer2">
-    <!-- <input type="radio" name="secondQuestion" ng-model="answer2"> A car<br>
-    <input type="radio" name="secondQuestion" ng-model="answer2"> A house (or other type of accomodation)<br>
-    <input type="radio" name="secondQuestion" ng-model="answer2"> Vacations<br>
-    <input type="radio" name="secondQuestion" ng-model="answer2"> Other -->
-    <button type="button">Previous question</button>
-    <button ng-click="saveAnswer2(); nextq()"  type="submit">Next question</button>
-</div>
-</div>
+<form>
+    <div ng-controller='thirdQ'>
+        <div id="question2" ng-controller='newctrl'>
+            Which continents have you visited so far?
+            <input type="checkbox" name="secondQuestion" ng-model="answer2.value1" value="Europe">Europe<br>
+            <input type="checkbox" name="secondQuestion" ng-model="answer2.value2" value="Asia">Asia<br>
+            <input type="checkbox" name="secondQuestion" ng-mogel="answer2.value3" value="Africa">Africa<br>
+            <input type="checkbox" name="secondQuestion" ng-model="answer2.value4" value="North America">North America<br>
+            <input type="checkbox" name="secondQuestion" ng-model="answer2.value5" value="South America">South America
+            <button type="button">Previous question</button>
+            <button ng-click="saveAnswer2(); nextq()" type="submit">Next question</button>
+        </div>
+    </div>
 </form>

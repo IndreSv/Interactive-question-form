@@ -1,11 +1,11 @@
-<div>Thank you for the responses. Below are your there are your answers displayed. We will get back to you as soon as possible.</div>
-<table ng-controller="newctrl" ng-init="getAnswer1(); getAnswer2()">
+<div>Thank you for the responses. Below are there are your answers displayed. We will get back to you as soon as possible.</div>
+<table ng-controller="newctrl" ng-init="getAnswer1(); getAnswer2(); getAnswer3(); getAnswer4(); getAnswer5()">
 <tr>
 <th>Question</th>
 <th>Your answer</th>
 </tr>
 <tr>
-<th>What is your occupation?</th>
+<th>What is your top destination for travelling?</th>
 <th ng-model="answer1">{{answer1}}</th>
 </tr>
 <tr>
@@ -14,14 +14,14 @@
 </tr>
 <tr>
 <th>What amount are you planning to save per month?</th>
-<th>Your answer</th>
+<th ng-model="answer3">{{answer3}}</th>
 </tr>
 <tr>
-<th>Do you have any financial commitments?</th>
-<th>Your answer</th>
+<th>Do you use travel agencies services when travelling?</th>
+<th ng-model="answer4">{{answer4}}</th>
 </tr>
 <tr>
-<th>The goal of the final savings amount?</th>
-<th>Your answer</th>
+<th>How often do you travel?</th>
+<th ng-model="answer5">{{answer5}}</th>
 </tr>
 </table>

@@ -1,9 +1,11 @@
 <form>
-<div id="question4" ng-controller="fifthQ">
-    Do you have any financial commitments?
-    <input type="radio" name="fourthQuestion"> Yes<br>
-    <input type="radio" name="fourthQuestion"> No
+  <div ng-controller="fifthQ">
+<div id="question4" ng-controller="newctrl">
+    Do you use travel agencies services when travelling?
+    <input type="radio" name="fourthQuestion" ng-model="answer4" value="Yes"> Yes<br>
+    <input type="radio" name="fourthQuestion" ng-model="answer4" value="No"> No
     <button type="button">Previous question</button>
-    <button ng-click="nextq()" type="button">Next question</button>
+    <button ng-click="saveAnswer4(); nextq()" type="button">Next question</button>
+</div>
 </div>
 </form>
