@@ -50,6 +50,10 @@ $scope.answer2 = {
         storeData.answer5.set($scope.answer5);
         console.log($scope.answer5);
     };
+    $scope.saveAnswer6 = function() {
+        storeData.answer6.set($scope.answer6);
+        console.log($scope.answer6);
+    };
     $scope.getAnswer1 = function() {
         var answer1 = storeData.answer1.get();
         $scope.answer1 = answer1;
@@ -69,5 +73,9 @@ $scope.answer2 = {
     $scope.getAnswer5 = function() {
         var answer5 = storeData.answer5.get();
         $scope.answer5 = answer5;
+    };
+    $scope.getAnswer6 = function() {
+        var answer6 = storeData.answer6.get();
+        $scope.answer6 = answer6;
     };
 }

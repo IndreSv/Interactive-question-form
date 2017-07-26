@@ -27,11 +27,17 @@ app.controller('thirdQ', function($scope, $state) {
     $scope.nextq = function() {
         $state.go('third');
     }
+    $scope.previousq = function() {
+      $state.go('first');
+    }
 });
 
 app.controller('fourthQ', function($scope, $state) {
     $scope.nextq = function() {
         $state.go('fourth');
+    }
+    $scope.previousq = function() {
+      $state.go('second');
     }
 });
 
@@ -39,11 +45,32 @@ app.controller('fifthQ', function($scope, $state) {
     $scope.nextq = function() {
         $state.go('fith');
     }
+    $scope.previousq = function() {
+      $state.go('third');
+    }
+});
+
+app.controller('dynamicQ', function($scope, $state) {
+    $scope.nextq = function() {
+        if ($scope.answer5 = "Yes") {
+            $state.go('additionalQ');
+            console.log($scope.answer5);
+        } else {
+            $state.go('summary');
+            console.log($scope.answer5);
+        }
+    }
+    $scope.previousq = function() {
+      $state.go('fourth');
+    }
 });
 
 app.controller('summaryView', function($scope, $state) {
     $scope.nextq = function() {
         $state.go('summary');
+    }
+    $scope.previousq = function() {
+      $state.go('fith');
     }
 });
 

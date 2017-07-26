@@ -1,0 +1,10 @@
+<form name="form6">
+    <div ng-controller="summaryView">
+        <div id="question1" ng-controller="newctrl">
+            Please list travel agencies, which services did you use during last 3 years?
+            <input type="text" ng-model="answer6" name="answer6" required><br>
+            <button type="button" ng-click="previousq()">Back</button>
+            <button ng-disabled="form6.$invalid" ng-click="saveAnswer6(); nextq()" type="submit">Next</button>
+        </div>
+    </div>
+</form>

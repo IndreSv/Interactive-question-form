@@ -46,6 +46,14 @@ var answer5
             get: function() {
                 return answer5;
             }
+        },
+        answer6: {
+            set: function(newValue) {
+                answer6 = newValue;
+            },
+            get: function() {
+                return answer6;
+            }
         }
     }
 }

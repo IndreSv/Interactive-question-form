@@ -7,8 +7,8 @@
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="Culture" ng-required="answer3 != ''">Culture<br>
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="History" ng-required="answer3 != ''">History<br>
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="The beach" ng-required="answer3 != ''">The beach
-    <button type="button">Previous question</button>
-    <button ng-disabled="form3.$invalid" ng-click="saveAnswer3(); nextq()" type="submit">Next question</button>
+    <button type="button" ng-click="previousq()">Back</button>
+    <button ng-disabled="form3.$invalid" ng-click="saveAnswer3(); nextq()" type="submit">Next</button>
 </div>
 </div>
 </form>
