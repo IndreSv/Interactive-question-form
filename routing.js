@@ -31,4 +31,8 @@ app.config(function($stateProvider) {
             url: '/summary',
             templateUrl: 'templates/summary.html'
         })
+        .state('additionalQ', {
+            url: '/6',
+            templateUrl: 'templates/additional.html'
+        })
 })

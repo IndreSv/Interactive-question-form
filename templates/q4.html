@@ -1,11 +1,15 @@
-<form>
+
+<form name="form4">
   <div ng-controller="fifthQ">
-<div id="question4" ng-controller="newctrl">
-    Do you use travel agencies services when travelling?
-    <input type="radio" name="fourthQuestion" ng-model="answer4" value="Yes"> Yes<br>
-    <input type="radio" name="fourthQuestion" ng-model="answer4" value="No"> No
-    <button type="button">Previous question</button>
-    <button ng-click="saveAnswer4(); nextq()" type="button">Next question</button>
-</div>
-</div>
-</form>
+        <div id="question5" ng-controller="newctrl">
+          How often do you travel?
+          <input type="radio" name="thirdQuestion" ng-model="answer4" value="Less than once per year" ng-required="answer4 != ''">Less than once per year<br>
+          <input type="radio" name="thirdQuestion" ng-model="answer4" value="Once per year" ng-required="answer4 != ''">Once per year<br>
+          <input type="radio" name="thirdQuestion" ng-model="answer4" value="Twice per year" ng-required="answer4 != ''">Twice per year<br>
+          <input type="radio" name="thirdQuestion" ng-model="answer4" value="3-4 times a year" ng-required="answer4 != ''">3-4 times a year<br>
+          <input type="radio" name="thirdQuestion" ng-model="answer4" value="More than 4 times a year" ng-required="answer4 != ''">More than 4 times a year
+            <button type="button">Previous question</button>
+            <button ng-disabled="form4.$invalid" ng-click="saveAnswer4(); nextq()" type="submit">Next question</button>
+        </div>
+      </div>
+      </form>

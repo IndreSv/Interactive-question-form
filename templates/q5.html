@@ -1,14 +1,11 @@
-<form>
+<form name="form5">
   <div ng-controller="summaryView">
-        <div id="question5" ng-controller="newctrl">
-          How often do you travel?
-          <input type="radio" name="thirdQuestion" ng-model="answer5" value="Less than once per year">Less than once per year<br>
-          <input type="radio" name="thirdQuestion" ng-model="answer5" value="Once per year">Once per year<br>
-          <input type="radio" name="thirdQuestion" ng-model="answer5" value="Twice per year">Twice per year<br>
-          <input type="radio" name="thirdQuestion" ng-model="answer5" value="3-4 times a year">3-4 times a year<br>
-          <input type="radio" name="thirdQuestion" ng-model="answer3" value="More than 4 times a year">More than 4 times a year
-            <button type="button">Previous question</button>
-            <button ng-click="saveAnswer5(); nextq()" type="submit">Finish the survey</button>
-        </div>
-      </div>
-      </form>
+<div id="question4" ng-controller="newctrl">
+    Do you use travel agencies services when travelling?
+    <input type="radio" name="fourthQuestion" ng-model="answer5" value="Yes" ng-required="answer5 != ''"> Yes<br>
+    <input type="radio" name="fourthQuestion" ng-model="answer5" value="No" ng-required="answer5 != ''"> No
+    <button type="button">Previous question</button>
+    <button ng-disabled="form5.$invalid" ng-click="saveAnswer5(); nextq()" type="button">Finish the survey</button>
+</div>
+</div>
+</form>
