@@ -28,7 +28,7 @@ app.controller('thirdQ', function($scope, $state) {
         $state.go('third');
     }
     $scope.previousq = function() {
-      $state.go('first');
+        $state.go('first');
     }
 });
 
@@ -37,7 +37,7 @@ app.controller('fourthQ', function($scope, $state) {
         $state.go('fourth');
     }
     $scope.previousq = function() {
-      $state.go('second');
+        $state.go('second');
     }
 });
 
@@ -46,14 +46,14 @@ app.controller('fifthQ', function($scope, $state) {
         $state.go('fith');
     }
     $scope.previousq = function() {
-      $state.go('third');
+        $state.go('third');
     }
 });
 
 app.controller('dynamicQ', function($scope, $state) {
     $scope.nextq = function() {
-      var firstOption = document.getElementById("firstOption");
-      var secondOption = document.getElementById("secondOption");
+        var firstOption = document.getElementById("firstOption");
+        var secondOption = document.getElementById("secondOption");
         if (firstOption.checked) {
             $state.go('additionalQ');
         } else {
@@ -61,7 +61,7 @@ app.controller('dynamicQ', function($scope, $state) {
         }
     }
     $scope.previousq = function() {
-      $state.go('fourth');
+        $state.go('fourth');
     }
 });
 
@@ -70,7 +70,7 @@ app.controller('summaryView', function($scope, $state) {
         $state.go('summary');
     }
     $scope.previousq = function() {
-      $state.go('fith');
+        $state.go('fith');
     }
 });
 
