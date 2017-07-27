@@ -22,40 +22,42 @@ newController.$inject = [
 ];
 
 function newController($scope, storeData) {
-$scope.values = {
-  "Europe": false,
-  "Asia": false,
-  "Africa": false,
-  "Noth America": false,
-  "South America": false
-}
+  $scope.answer2 = {
+    europe: false,
+  asia: false,
+  africa: false,
+  soutamerica: false,
+  northamerica: false
+  }
 
     $scope.saveAnswer1 = function() {
         storeData.answer1.set($scope.answer1);
-        console.log($scope.answer1);
     };
     $scope.saveAnswer2 = function() {
-var keys = Object.values($scope.values);
- console.log(keys);
-      $scope.answer2 = Object.keys($scope.values);
+      var europe = document.getElementById("europe");
+      var asia = document.getElementById("asia");
+      var africa = document.getElementById("africa");
+      var southAmerica = document.getElementById("southamerica");
+      var northAmerica = document.getElementById("northamerica");
+      $scope.answer2 = [];
+      if (europe.checked) {($scope.answer2.push(europe.value));}
+        if (asia.checked) {($scope.answer2.push(asia.value));}
+          if (africa.checked) {($scope.answer2.push(africa.value));}
+            if (southAmerica.checked) {($scope.answer2.push(southAmerica.value));}
+              if (northAmerica.checked) {($scope.answer2.push(northAmerica.value));}
         storeData.answer2.set($scope.answer2);
-        console.log($scope.answer2);
     };
     $scope.saveAnswer3 = function() {
         storeData.answer3.set($scope.answer3);
-        console.log($scope.answer3);
     };
     $scope.saveAnswer4 = function() {
         storeData.answer4.set($scope.answer4);
-        console.log($scope.answer4);
     };
     $scope.saveAnswer5 = function() {
         storeData.answer5.set($scope.answer5);
-        console.log($scope.answer5);
     };
     $scope.saveAnswer6 = function() {
         storeData.answer6.set($scope.answer6);
-        console.log($scope.answer6);
     };
     $scope.getAnswer1 = function() {
         var answer1 = storeData.answer1.get();

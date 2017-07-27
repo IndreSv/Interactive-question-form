@@ -56,10 +56,8 @@ app.controller('dynamicQ', function($scope, $state) {
       var secondOption = document.getElementById("secondOption");
         if (firstOption.checked) {
             $state.go('additionalQ');
-            console.log(firstOption);
         } else {
             $state.go('summary');
-            console.log(secondOption);
         }
     }
     $scope.previousq = function() {

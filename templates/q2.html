@@ -2,11 +2,11 @@
     <div ng-controller='thirdQ'>
         <div id="question2" ng-controller='newctrl'>
             Which continents have you visited so far?
-            <input type="checkbox" name="secondQuestion" ng-model="values.value1" value="Europe">Europe<br>
-            <input type="checkbox" name="secondQuestion" ng-model="values.value2" value="Asia">Asia<br>
-            <input type="checkbox" name="secondQuestion" ng-mogel="values.value3" value="Africa">Africa<br>
-            <input type="checkbox" name="secondQuestion" ng-model="values.value4" value="North America">North America<br>
-            <input type="checkbox" name="secondQuestion" ng-model="values.value5" value="South America">South America
+            <input id="europe" type="checkbox" ng-model="answer2.europe" value="Europe">Europe<br>
+            <input id="asia" type="checkbox" ng-model="answer2.asia" value="Asia">Asia<br>
+            <input id="northamerica" type="checkbox" ng-model="answer2.northamerica" value="North America">North America<br>
+            <input id="southamerica" type="checkbox" ng-model="answer2.southamerica" value="South America">South America<br>
+            <input id="africa" type="checkbox" ng-model="answer2.africa" value="Africa">Africa<br>
             <button type="button" ng-click="previousq()">Back</button>
             <button ng-click="saveAnswer2(); nextq()" type="submit">Next</button>
         </div>
