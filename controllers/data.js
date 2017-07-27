@@ -22,12 +22,12 @@ newController.$inject = [
 ];
 
 function newController($scope, storeData) {
-$scope.answer2 = {
-  value1: false,
-  value2: false,
-  value3: false,
-  value4: false,
-  value5: false
+$scope.values = {
+  "Europe": false,
+  "Asia": false,
+  "Africa": false,
+  "Noth America": false,
+  "South America": false
 }
 
     $scope.saveAnswer1 = function() {
@@ -35,6 +35,9 @@ $scope.answer2 = {
         console.log($scope.answer1);
     };
     $scope.saveAnswer2 = function() {
+var keys = Object.values($scope.values);
+ console.log(keys);
+      $scope.answer2 = Object.keys($scope.values);
         storeData.answer2.set($scope.answer2);
         console.log($scope.answer2);
     };

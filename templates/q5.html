@@ -2,8 +2,8 @@
   <div ng-controller="dynamicQ">
 <div id="question4" ng-controller="newctrl">
     Do you use travel agencies services when travelling?
-    <input type="radio" name="fourthQuestion" ng-model="answer5" value="Yes" ng-required="answer5 != ''">Yes<br>
-    <input type="radio" name="fourthQuestion" ng-model="answer5" value="No" ng-required="answer5 != ''"> No
+    <input id="firstOption" type="radio" name="fourthQuestion" ng-model="answer5" value="Yes" ng-required="answer5 != ''">Yes<br>
+    <input id="secondOption" type="radio" name="fourthQuestion" ng-model="answer5" value="No" ng-required="answer5 != ''"> No
     <button type="button" ng-click="previousq()">Previous question</button>
     <button ng-disabled="form5.$invalid" ng-click="saveAnswer5(); nextq()" type="button">Next</button>
 </div>

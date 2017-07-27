@@ -52,12 +52,14 @@ app.controller('fifthQ', function($scope, $state) {
 
 app.controller('dynamicQ', function($scope, $state) {
     $scope.nextq = function() {
-        if ($scope.answer5 = "Yes") {
+      var firstOption = document.getElementById("firstOption");
+      var secondOption = document.getElementById("secondOption");
+        if (firstOption.checked) {
             $state.go('additionalQ');
-            console.log($scope.answer5);
+            console.log(firstOption);
         } else {
             $state.go('summary');
-            console.log($scope.answer5);
+            console.log(secondOption);
         }
     }
     $scope.previousq = function() {
