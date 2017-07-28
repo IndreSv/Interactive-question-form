@@ -1,0 +1,25 @@
+table {
+  margin-top: 10px;
+    font-family: 'Lato', sans-serif;
+    font-size: 18px;
+    line-height: 24px;
+    max-width: 100%;
+}
+
+th {
+  display: block;
+}
+
+.question {
+  font-weight: normal;
+  background-color: $question-color;
+  font-style: italic;
+}
+
+.answer {
+  background-color: $answer-color;
+}
+
+@-ms-viewport {
+    width: device-width;
+}
