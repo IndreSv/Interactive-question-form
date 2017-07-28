@@ -44,4 +44,10 @@ input[type="text"] {
   margin-bottom: 5%;
   line-height: 28px; }
 
+label {
+  position: relative;
+  margin: .5rem;
+  font-family: Arial, sans-serif;
+  cursor: pointer; }
+
 /*# sourceMappingURL=stylesheet.css.map */
