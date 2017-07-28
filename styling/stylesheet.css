@@ -44,6 +44,8 @@ label {
   background-color: #F2F0E9;
   padding-bottom: 8px; }
 
+@-ms-viewport {
+  width: device-width; }
 button {
   text-align: center;
   font-size: 24px;
@@ -72,6 +74,11 @@ button:hover:enabled {
   transition: all 250ms linear;
   cursor: pointer; }
 
+@media only screen and (min-width: 769px) {
+  button {
+    max-width: 30%;
+    margin-left: 10px;
+    margin-right: 10px; } }
 html {
   box-sizing: border-box; }
 

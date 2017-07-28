@@ -1,5 +1,3 @@
-
-
 body {
   background-color: $background-color;
   font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
@@ -52,3 +50,15 @@ cursor: pointer;
   background-color: $header-color;
   padding-bottom: 8px;
 }
+
+@-ms-viewport {
+    width: device-width;
+}
+
+// @media only screen and (min-width: 769px) {
+//     button {
+//         max-width: 30%;
+//         margin-left: 10px;
+//         margin-right: 10px;
+//     }
+// }
