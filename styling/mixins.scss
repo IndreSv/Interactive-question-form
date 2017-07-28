@@ -6,10 +6,28 @@ button {
   margin-right: 10%;
   margin-top: 5%;
   margin-bottom: 5%;
-  background-color: #407C7C;
-  color: #dedede;
+  background-color: $buttons-color;
+  color: $buttons-text;
   padding: 2px;
   width: 80%;
+  border: 1px solid rgb(128,128,128);
+ border-radius : 4px;
+}
+
+button[disabled] {
+  opacity: 0.65;
+  cursor: not-allowed;
+}
+
+button:hover:enabled {
+background: darken($buttons-color, 5%);
+border: 1px solid rgba(#000, .05);
+box-shadow: 1px 1px 2px rgba(#fff, .2);
+color: lighten($buttons-text, 5%);
+text-decoration: none;
+text-shadow: -1px -1px 0 darken($buttons-text, 5%);
+transition: all 250ms linear;
+cursor: pointer;
 }
 
 body {
