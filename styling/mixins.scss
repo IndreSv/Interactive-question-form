@@ -4,8 +4,8 @@ button {
   padding: 0;
   margin-left: 10%;
   margin-right: 10%;
-  margin-top: 5%;
-  margin-bottom: 5%;
+  margin-top: 10px;
+  margin-bottom: 10px;
   background-color: $buttons-color;
   color: $buttons-text;
   padding: 2px;
@@ -44,7 +44,7 @@ h1 {
   text-align: center;
   position: relative;
   width: 100%;
-  margin: 0 auto;
+  margin: 10px auto;
   vertical-align: bottom;
 }
 

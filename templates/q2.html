@@ -1,14 +1,14 @@
-<form>
+<form name="form2">
     <div ng-controller='thirdQ'>
         <div id="question2" ng-controller='newctrl'>
             Which continents have you visited so far?<br>
-            <label><input id="europe" type="checkbox" ng-model="answer2.europe" value="Europe">Europe</label><br>
-            <label><input id="asia" type="checkbox" ng-model="answer2.asia" value="Asia">Asia</label><br>
-            <label><input id="northamerica" type="checkbox" ng-model="answer2.northamerica" value="North America">North America</label><br>
-            <label><input id="southamerica" type="checkbox" ng-model="answer2.southamerica" value="South America">South America</label><br>
-            <label><input id="africa" type="checkbox" ng-model="answer2.africa" value="Africa">Africa</label><br>
+            <label><input id="europe" type="checkbox" ng-model="answer2.europe" value="Europe" ng-required = "!(answer2.europe || answer2.asia || answer2.northamerica || answer2.southamerica || answer2.africa)">Europe</label><br>
+            <label><input id="asia" type="checkbox" ng-model="answer2.asia" value="Asia" ng-required = "!(answer2.europe || answer2.asia || answer2.northamerica || answer2.southamerica || answer2.africa)">Asia</label><br>
+            <label><input id="northamerica" type="checkbox" ng-model="answer2.northamerica" value="North America" ng-required = "!(answer2.europe || answer2.asia || answer2.northamerica || answer2.southamerica || answer2.africa)">North America</label><br>
+            <label><input id="southamerica" type="checkbox" ng-model="answer2.southamerica" value="South America" ng-required = "!(answer2.europe || answer2.asia || answer2.northamerica || answer2.southamerica || answer2.africa)">South America</label><br>
+            <label><input id="africa" type="checkbox" ng-model="answer2.africa" value="Africa" ng-required = "!(answer2.europe || answer2.asia || answer2.northamerica || answer2.southamerica || answer2.africa)">Africa</label><br>
             <button type="button" ng-click="previousq()">Back</button>
-            <button ng-click="saveAnswer2(); nextq()" type="submit">Next</button>
+            <button ng-disabled="form2.$invalid" ng-click="saveAnswer2(); nextq()" type="submit">Next</button>
         </div>
     </div>
 </form>
