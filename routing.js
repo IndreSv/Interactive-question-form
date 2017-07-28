@@ -4,7 +4,7 @@ var app = angular.module('myApp');
 app.config(function($stateProvider) {
     $stateProvider
         .state('intro', {
-            url: '/intro',
+            url: '',
             templateUrl: 'templates/intro.html',
         })
         .state('first', {
