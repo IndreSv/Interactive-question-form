@@ -12,12 +12,13 @@ th {
 }
 
 .question {
-  font-weight: normal;
-  background-color: $question-color;
-  font-style: italic;
+  @include summary;
+    background-color: $question-color;
+    font-weight: normal;
 }
 
 .answer {
+  @include summary;
   background-color: $answer-color;
 }
 
