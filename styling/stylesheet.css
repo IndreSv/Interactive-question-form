@@ -46,7 +46,7 @@ label {
 
 @-ms-viewport {
   width: device-width; }
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   input[type="text"] {
     max-width: 30%;
     margin: 10px 10px; } }
@@ -78,7 +78,7 @@ button:hover:enabled {
   transition: all 250ms linear;
   cursor: pointer; }
 
-@media only screen and (min-width: 769px) {
+@media only screen and (min-width: 768px) {
   button {
     max-width: 30%;
     margin-left: 10px;
@@ -88,7 +88,8 @@ table {
   font-family: 'Lato', sans-serif;
   font-size: 18px;
   line-height: 24px;
-  max-width: 100%; }
+  max-width: 100%;
+  display: inline-block; }
 
 th {
   display: block; }
