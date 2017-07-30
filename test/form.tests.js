@@ -17,19 +17,66 @@ describe("firstQ", function() {
         $scope = _$rootScope_.$new();
     }));
 
-    beforeEach(function() {
-      ctrl = $controller("firstQ", {
-        $scope: $scope,
-        $state: $state
-      });
-    })
-
     describe('$scope.nextq', function() {
-        it('should be directed tofirst state', function() {
+        it('should be directed to first state', function() {
+            ctrl = $controller("firstQ", {
+                $scope: $scope,
+                $state: $state
+            });
             spyOn($state, 'go');
             $scope.nextq();
-                expect($state.go).toHaveBeenCalledWith('first');
-            })
-
+            expect($state.go).toHaveBeenCalledWith('first');
         })
+
+
+        it('should be directed to first state', function() {
+            ctrl = $controller("secondQ", {
+                $scope: $scope,
+                $state: $state
+            });
+            spyOn($state, 'go');
+            $scope.nextq();
+            expect($state.go).toHaveBeenCalledWith('second');
+        })
+
+        it('should be directed to first state', function() {
+            ctrl = $controller("thirdQ", {
+                $scope: $scope,
+                $state: $state
+            });
+            spyOn($state, 'go');
+            $scope.nextq();
+            expect($state.go).toHaveBeenCalledWith('third');
+        })
+
+        it('should be directed to first state', function() {
+            ctrl = $controller("fourthQ", {
+                $scope: $scope,
+                $state: $state
+            });
+            spyOn($state, 'go');
+            $scope.nextq();
+            expect($state.go).toHaveBeenCalledWith('fourth');
+        })
+
+        it('should be directed to first state', function() {
+            ctrl = $controller("fifthQ", {
+                $scope: $scope,
+                $state: $state
+            });
+            spyOn($state, 'go');
+            $scope.nextq();
+            expect($state.go).toHaveBeenCalledWith('fith');
+        })
+
+        it('should be directed to first state', function() {
+            ctrl = $controller("summaryView", {
+                $scope: $scope,
+                $state: $state
+            });
+            spyOn($state, 'go');
+            $scope.nextq();
+            expect($state.go).toHaveBeenCalledWith('summary');
+        })
+    })
 })

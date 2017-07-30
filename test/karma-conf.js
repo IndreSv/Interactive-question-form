@@ -36,19 +36,34 @@ module.exports = function(config){
     browsers : ['Chrome', 'PhantomJS', 'Firefox'],
 
     // progress is the default reporter
-    reporters: ['progress'],
+    reporters: ['progress', 'coverage', 'threshold'],
 
     // map of preprocessors that is used mostly for plugins
     preprocessors: {
-
+'Controllers/*.js': 'coverage'
     },
 
+    coverageReporter: {
+      type : 'text',
+ dir : 'coverage/',
+ file : 'coverage.txt'
+    },
+
+
+    thresholdReporter: {
+        statements: 10,
+        branches: 0,
+        functions: 10,
+        lines: 10
+    },
     // list of karma plugins
     plugins : [
         'karma-junit-reporter',
         'karma-chrome-launcher',
         'karma-firefox-launcher',
         'karma-jasmine',
-        'karma-phantomjs-launcher'
+        'karma-phantomjs-launcher',
+        'karma-coverage',
+        'karma-threshold-reporter'
     ]
 })}
