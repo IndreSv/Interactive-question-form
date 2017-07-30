@@ -10,7 +10,6 @@ describe("statesTesting", function() {
     var $controller;
     var $state;
     var $scope;
-    var firstOption;
 
     beforeEach(inject(function(_$controller_, _$state_, _$rootScope_) {
         $controller = _$controller_;

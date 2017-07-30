@@ -1,25 +1,44 @@
 describe("Tests for storing answers", function() {
-    var stateProviderMock, ctrl;
+    var storeDataProviderMock, ctrl;
     beforeEach(function() {
-        stateProviderMock = jasmine.createSpyObj('stateProvider', ['intro']);
-        scopeProviderMock = jasmine.createSpyObj('scope', ['nextq', 'previousq']);
+        storeDataProviderMock = {
+            answer1: {
+                set: jasmine.createSpy(),
+                get: jasmine.createSpy()
+            },
+            answer3: {
+              set: jasmine.createSpy(),
+              get: jasmine.createSpy()
+            }
+        }
     })
-    beforeEach(module('myApp', function($provide) {
-        $provide.value('$stateProvider', stateProviderMock);
-    }));
+    beforeEach(module('myApp', function($provide) {}));
     var $controller;
     var $state;
     var $scope;
-    var firstOption;
 
-    beforeEach(inject(function(_$controller_, _$state_, _$rootScope_) {
+
+    beforeEach(inject(function(_$controller_, _$rootScope_) {
         $controller = _$controller_;
-        $state = _$state_;
         $scope = _$rootScope_.$new();
     }));
 
     beforeEach(function() {
         ctrl = $controller("answersStorage", {
             $scope: $scope,
-            $state: $state
-        });)
+            storeData: storeDataProviderMock
+        });
+    });
+    describe('$scope.saveAnswer1', function() {
+        it('should call the service with answer1 parameter', function() {
+            $scope.answer1 = "answer1"
+            $scope.saveAnswer1();
+            expect(storeDataProviderMock.answer1.set).toHaveBeenCalledWith('answer1');
+        })
+        it('should call the service with answer3 parameter', function() {
+            $scope.answer3 = "answer3"
+            $scope.saveAnswer3();
+            expect(storeDataProviderMock.answer3.set).toHaveBeenCalledWith('answer3');
+        })
+    });
+});
