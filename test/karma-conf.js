@@ -8,6 +8,7 @@ module.exports = function(config){
       // include relevant Angular files and libs
       'bower-angular/angular.js',
       'node_modules/angular-mocks/angular-mocks.js',
+      'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
       'Controllers/form.js',
       // 'test/lib/angular/angular-mocks.js',
 
