@@ -1,4 +1,4 @@
-angular.module("myApp").controller("newctrl", newController);
+angular.module("myApp").controller("answersStorage", newController);
 
 newController.$inject = [
     "$scope",
