@@ -40,7 +40,8 @@ module.exports = function(config){
 
     // map of preprocessors that is used mostly for plugins
     preprocessors: {
-'Controllers/*.js': 'coverage'
+'Controllers/*.js': 'coverage',
+'srvc.js': 'coverage'
     },
 
     coverageReporter: {
