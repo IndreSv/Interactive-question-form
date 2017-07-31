@@ -35,7 +35,6 @@ label {
   cursor: pointer; }
 
 .header {
-  height: 70px;
   width: 100%;
   display: flex;
   position: sticky;
@@ -125,6 +124,11 @@ th {
 
 @-ms-viewport {
   width: device-width; }
+@media only screen and (min-width: 768px) {
+  table {
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%; } }
 html {
   box-sizing: border-box; }
 
