@@ -1,6 +1,5 @@
-var app = angular.module('myApp', ['ui.router']);
 
-app.controller('stateChangeController', function($scope, $state) {
+angular.module('myApp').controller('stateChangeController', function($scope, $state) {
     $scope.question1 = function() {
         $state.go('first');
     };
