@@ -1,15 +1,4 @@
-// require('./srvc.js');
 var app = angular.module('myApp', ['ui.router']);
-
-// app.controller('mainCtrl', function($scope, $state) {
-//     $scope.tabs = ['intro', 'first', 'second', 'third', 'fourth', 'fith', 'summary'];
-//     $scope.currentIndex = -1;
-//     $scope.nextq = function() {
-//         $scope.currentIndex = $scope.currentIndex + 1;
-//         var name = $scope.tabs[$scope.currentIndex];
-//         $state.go(name);
-//     }
-// });
 
 app.controller('firstQ', function($scope, $state) {
     $scope.nextq = function() {

@@ -1,45 +1,39 @@
-angular.module("myApp").controller("answersStorage", newController);
+angular.module("myApp").controller("answersStorageController", answersStorageController);
 
-newController.$inject = [
+answersStorageController.$inject = [
     "$scope",
     "storeData"
 ];
 
-function newController($scope, storeData) {
-    $scope.answer2 = {
+function answersStorageController($scope, storeData) {
+    $scope.countries = [{
         europe: false,
         asia: false,
         africa: false,
-        soutamerica: false,
+        southamerica: false,
         northamerica: false
-    }
+    }]
 
     $scope.saveAnswer1 = function() {
         storeData.answer1.set($scope.answer1);
     };
     $scope.saveAnswer2 = function() {
-        var europe = document.getElementById("europe");
-        var asia = document.getElementById("asia");
-        var africa = document.getElementById("africa");
-        var southAmerica = document.getElementById("southamerica");
-        var northAmerica = document.getElementById("northamerica");
-        $scope.answer2 = [];
-        if (europe.checked) {
-            ($scope.answer2.push(europe.value));
+        if (europe.true) {
+            ($scope.answer2.push(europe));
         }
-        if (asia.checked) {
-            ($scope.answer2.push(asia.value));
+        if (asia.true) {
+            ($scope.answer2.push(asia));
         }
-        if (africa.checked) {
-            ($scope.answer2.push(africa.value));
+        if (africa.true) {
+            ($scope.answer2.push(africa));
         }
-        if (southAmerica.checked) {
-            ($scope.answer2.push(southAmerica.value));
+        if (southamerica.true) {
+            ($scope.answer2.push(southAmerica));
         }
-        if (northAmerica.checked) {
-            ($scope.answer2.push(northAmerica.value));
+        if (northamerica.true) {
+            ($scope.answer2.push(northAmerica));
         }
-        storeData.answer2.set($scope.answer2);
+        storeData.answer2.set(Object.keys($scope.answer2));
     };
     $scope.saveAnswer3 = function() {
         storeData.answer3.set($scope.answer3);

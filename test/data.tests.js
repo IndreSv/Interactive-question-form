@@ -36,7 +36,7 @@ describe("Tests for storing answers", function() {
     }));
 
     beforeEach(function() {
-        ctrl = $controller("answersStorage", {
+        ctrl = $controller("answersStorageController", {
             $scope: $scope,
             storeData: storeDataProviderMock
         });
