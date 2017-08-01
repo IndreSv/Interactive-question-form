@@ -1,7 +1,4 @@
-var app = angular.module('myApp');
-
-
-app.config(function($stateProvider) {
+angular.module("myApp").config(function($stateProvider) {
     $stateProvider
         .state('intro', {
             url: '',
