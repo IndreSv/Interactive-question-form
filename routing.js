@@ -23,7 +23,7 @@ app.config(function($stateProvider) {
             url: '/4',
             templateUrl: 'templates/q4.html'
         })
-        .state('fith', {
+        .state('fifth', {
             url: '/5',
             templateUrl: 'templates/q5.html'
         })

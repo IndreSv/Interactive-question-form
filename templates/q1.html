@@ -1,9 +1,9 @@
 <form name="form1">
-  <div ng-controller="secondQ">
+  <div ng-controller="stateChangeController">
 <div id="question1" ng-controller="answersStorageController" class="text">
     Which country is your top destination for travelling?
     <input type="text" ng-model="answer1" name="answer1" required maxlength="40"><br>
-    <button ng-disabled="form1.$invalid" ng-click="saveAnswer1(); nextq()" type="submit">Next</button>
+    <button ng-disabled="form1.$invalid" ng-click="saveAnswer1(); question2()" type="submit">Next</button>
 </div>
 </div>
 </form>
