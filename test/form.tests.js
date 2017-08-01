@@ -24,7 +24,7 @@ describe("statesTesting", function() {
         })
     });
 
-    describe('$scope.nextq', function() {
+    describe('states tests', function() {
         it('should be directed to first state', function() {
             spyOn($state, 'go');
             $scope.question1();
