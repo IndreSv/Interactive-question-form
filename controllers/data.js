@@ -18,22 +18,11 @@ function answersStorageController($scope, storeData) {
         storeData.answer1.set($scope.answer1);
     };
     $scope.saveAnswer2 = function() {
-        if (europe.true) {
-            ($scope.answer2.push(europe));
+        for (var key in $scope.countries) {
+          if ($scope.countries[key]===true) {
+            storeData.answer2.set(Object.keys($scope.countries));
+          }
         }
-        if (asia.true) {
-            ($scope.answer2.push(asia));
-        }
-        if (africa.true) {
-            ($scope.answer2.push(africa));
-        }
-        if (southamerica.true) {
-            ($scope.answer2.push(southAmerica));
-        }
-        if (northamerica.true) {
-            ($scope.answer2.push(northAmerica));
-        }
-        storeData.answer2.set(Object.keys($scope.answer2));
     };
     $scope.saveAnswer3 = function() {
         storeData.answer3.set($scope.answer3);

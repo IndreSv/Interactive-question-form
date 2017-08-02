@@ -20,7 +20,7 @@ var answer5
                 answer2 = newValue
             },
             get: function() {
-                return answer2;
+                return answer2.slice(1);
             }
         },
         answer3: {
