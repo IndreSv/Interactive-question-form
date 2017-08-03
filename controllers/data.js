@@ -36,29 +36,12 @@ function answersStorageController($scope, storeData) {
     $scope.saveAnswer6 = function() {
         storeData.answers.set($scope.answer6, 6);
     };
-    $scope.getAnswer1 = function() {
-        var answer1 = storeData.answers.get(1);
-        $scope.answer1 = answer1;
-
-    };
-    $scope.getAnswer2 = function() {
-        var answer2 = storeData.answers.get(2);
-        $scope.answer2 = answer2;
-    };
-    $scope.getAnswer3 = function() {
-        var answer3 = storeData.answers.get(3);
-        $scope.answer3 = answer3;
-    };
-    $scope.getAnswer4 = function() {
-        var answer4 = storeData.answers.get(4);
-        $scope.answer4 = answer4;
-    };
-    $scope.getAnswer5 = function() {
-        var answer5 = storeData.answers.get(5);
-        $scope.answer5 = answer5;
-    };
-    $scope.getAnswer6 = function() {
-        var answer6 = storeData.answers.get(6);
-        $scope.answer6 = answer6;
+    $scope.getAnswer = function() {
+        $scope.summary = [];
+        for (i = 1; i < 7; i++) {
+            var answer = storeData.answers.get(i);
+            $scope.answer = answer;
+            $scope.summary.push($scope.answer);
+        };
     };
 }
