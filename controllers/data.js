@@ -2,7 +2,7 @@ angular.module("myApp").controller("answersStorageController", answersStorageCon
 
 answersStorageController.$inject = [
     "$scope",
-    "storeData"
+    "storeData",
 ];
 
 function answersStorageController($scope, storeData) {
@@ -15,49 +15,50 @@ function answersStorageController($scope, storeData) {
     }]
 
     $scope.saveAnswer1 = function() {
-        storeData.answer1.set($scope.answer1);
+        storeData.answers.set($scope.answer1, 1);
     };
     $scope.saveAnswer2 = function() {
         for (var key in $scope.countries) {
-          if ($scope.countries[key]===true) {
-            storeData.answer2.set(Object.keys($scope.countries));
-          }
+            if ($scope.countries[key] === true) {
+                storeData.answers.set(Object.keys($scope.countries), 2);
+            }
         }
     };
     $scope.saveAnswer3 = function() {
-        storeData.answer3.set($scope.answer3);
+        storeData.answers.set($scope.answer3, 3);
     };
     $scope.saveAnswer4 = function() {
-        storeData.answer4.set($scope.answer4);
+        storeData.answers.set($scope.answer4, 4);
     };
     $scope.saveAnswer5 = function() {
-        storeData.answer5.set($scope.answer5);
+        storeData.answers.set($scope.answer5, 5);
     };
     $scope.saveAnswer6 = function() {
-        storeData.answer6.set($scope.answer6);
+        storeData.answers.set($scope.answer6, 6);
     };
     $scope.getAnswer1 = function() {
-        var answer1 = storeData.answer1.get();
+        var answer1 = storeData.answers.get(1);
         $scope.answer1 = answer1;
+
     };
     $scope.getAnswer2 = function() {
-        var answer2 = storeData.answer2.get();
+        var answer2 = storeData.answers.get(2);
         $scope.answer2 = answer2;
     };
     $scope.getAnswer3 = function() {
-        var answer3 = storeData.answer3.get();
+        var answer3 = storeData.answers.get(3);
         $scope.answer3 = answer3;
     };
     $scope.getAnswer4 = function() {
-        var answer4 = storeData.answer4.get();
+        var answer4 = storeData.answers.get(4);
         $scope.answer4 = answer4;
     };
     $scope.getAnswer5 = function() {
-        var answer5 = storeData.answer5.get();
+        var answer5 = storeData.answers.get(5);
         $scope.answer5 = answer5;
     };
     $scope.getAnswer6 = function() {
-        var answer6 = storeData.answer6.get();
+        var answer6 = storeData.answers.get(6);
         $scope.answer6 = answer6;
     };
 }

@@ -4,6 +4,7 @@
 //
 //     beforeEach(function() {
 //       serviceProviderMock = jasmine.createSpyObj('storeData', ['StoreDataService']);
+//
 //     });
 //
 //         beforeEach(function() {
