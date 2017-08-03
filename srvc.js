@@ -12,9 +12,11 @@ function StoreDataService() {
     return {
         answers: {
             set: function(newValue, number) {
-              if (isNaN(number)) {return "wrong parameter"}
-              else
-                {answers["answer" + number] = newValue};
+                if (isNaN(number) || newValue === '') {
+                    return "wrong parameters";
+                } else {
+                    answers["answer" + number] = newValue
+                };
             },
             get: function(number) {
                 return (answers['answer' + number]);
