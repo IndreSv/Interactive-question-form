@@ -16,7 +16,7 @@ describe("Service tests", function() {
         it('should not accept string as question number', function() {
             expect(service.answers.set("Test", "not a number")).toEqual("wrong parameters");
         });
-        it('should not accept string as question number', function() {
+        it('should not accept empty value', function() {
             expect(service.answers.set('', 1)).toEqual("wrong parameters");
         });
     });

@@ -13,7 +13,7 @@ function StoreDataService() {
         answers: {
             set: function(newValue, number) {
                 if (isNaN(number) || newValue === '') {
-                    return "wrong parameters";
+                    throw "wrong parameters";
                 } else {
                     answers[number] = newValue;
                 };
