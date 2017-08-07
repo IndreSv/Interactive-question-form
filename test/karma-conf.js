@@ -10,15 +10,18 @@ module.exports = function(config){
       'node_modules/angular-mocks/angular-mocks.js',
       'node_modules/@uirouter/angularjs/release/angular-ui-router.js',
       'myApp.module.js',
-      'Controllers/form.js',
+      'states-routing/form.js',
       // 'test/lib/angular/angular-mocks.js',
 
       // include js files
       '*.js',
-      'Controllers/*.js',
+      'states-routing/*.js',
+      'data-storage/*.js',
 
       // include unit test specs
-      'test/*.js'
+      'data-storage/data.tests.js',
+      'data-storage/srvc.test.js',
+      'states-routing/form.tests.js',
     ],
     // files to exclude
     exclude : [
@@ -41,8 +44,8 @@ module.exports = function(config){
 
     // map of preprocessors that is used mostly for plugins
     preprocessors: {
-'Controllers/*.js': 'coverage',
-'srvc.js': 'coverage'
+'data-storage/*.js': 'coverage',
+'states-routing/*.js': 'coverage'
     },
 
     coverageReporter: {
