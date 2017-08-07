@@ -1,5 +1,4 @@
 <form name="form3">
-  <div ng-controller='stateChangeController'>
 <div id="question3" ng-controller='answersStorageController' class="text">
     What is your main interest in foreign countries?<br>
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="Nature" ng-required="answer3 != ''">Nature<br>
@@ -8,7 +7,6 @@
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="History" ng-required="answer3 != ''">History<br>
     <input type="radio" name="thirdQuestion" ng-model="answer3" value="The beach" ng-required="answer3 != ''">The beach<br>
     <button type="button" ng-click="question2()">Back</button>
-    <button ng-disabled="form3.$invalid" ng-click="saveAnswer3(); question4()" type="submit">Next</button>
-</div>
+    <button ng-disabled="form3.$invalid" ng-click="saveAnswer3(); vm.question4()" type="submit">Next</button>
 </div>
 </form>

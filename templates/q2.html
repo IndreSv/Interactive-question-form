@@ -1,5 +1,4 @@
 <form name="form2">
-    <div ng-controller='stateChangeController'>
         <div id="question2" ng-controller='answersStorageController' class="text">
             Which continents have you visited so far?<br>
             <label><input id="europe" type="checkbox" ng-model="countries.europe" value="Europe" ng-required = "!(countries.europe || countries.asia || countries.northamerica || countries.southamerica || countries.africa)">Europe</label><br>
@@ -8,7 +7,6 @@
             <label><input id="southamerica" type="checkbox" ng-model="countries.southamerica" value="South America" ng-required = "!(countries.europe || countries.asia || countries.northamerica || countries.southamerica || countries.africa)">South America</label><br>
             <label><input id="africa" type="checkbox" ng-model="countries.africa" value="Africa" ng-required = "!(countries.europe || countries.asia || countries.northamerica || countries.southamerica || countries.africa)">Africa</label><br>
             <button type="button" ng-click="question1()">Back</button>
-            <button ng-disabled="form2.$invalid" ng-click="saveAnswer2(); question3()" type="submit">Next</button>
+            <button ng-disabled="form2.$invalid" ng-click="saveAnswer2(); vm.question3()" type="submit">Next</button>
         </div>
-    </div>
 </form>

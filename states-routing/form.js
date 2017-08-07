@@ -1,21 +1,22 @@
 
-angular.module('myApp').controller('stateChangeController', function($scope, $state) {
-    $scope.question1 = function() {
+angular.module('myApp').controller('stateChangeController', function($state) {
+var vm = this;
+    vm.question1 = function() {
         $state.go('first');
     };
-    $scope.question2 = function() {
+    vm.question2 = function() {
         $state.go('second');
     };
-    $scope.question3 = function() {
+    vm.question3 = function() {
         $state.go('third');
     };
-    $scope.question4 = function() {
+    vm.question4 = function() {
         $state.go('fourth');
     };
-    $scope.question5 = function() {
+    vm.question5 = function() {
         $state.go('fifth');
     };
-    $scope.dynamicQ = function() {
+    vm.dynamicQ = function() {
         var firstOption = document.getElementById("firstOption");
         var secondOption = document.getElementById("secondOption");
         if (firstOption.checked) {
@@ -24,7 +25,7 @@ angular.module('myApp').controller('stateChangeController', function($scope, $st
             $state.go('summary');
         }
     };
-    $scope.summary = function() {
+    vm.summary = function() {
         $state.go('summary');
     }
 });
