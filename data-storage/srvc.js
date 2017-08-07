@@ -2,12 +2,12 @@ angular.module('myApp').factory('storeData', StoreDataService);
 
 function StoreDataService() {
     var answers = {
-        answer1: '',
-        answer2: '',
-        answer3: '',
-        answer4: '',
-        answer5: '',
-        answer6: ''
+        1: '',
+        2: '',
+        3: '',
+        4: '',
+        5: '',
+        6: ''
     }
     return {
         answers: {
@@ -15,11 +15,11 @@ function StoreDataService() {
                 if (isNaN(number) || newValue === '') {
                     return "wrong parameters";
                 } else {
-                    answers["answer" + number] = newValue
+                    answers[number] = newValue;
                 };
             },
             get: function(number) {
-                return (answers['answer' + number]);
+                return (answers[number]);
             }
         }
     }
