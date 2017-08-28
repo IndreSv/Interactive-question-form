@@ -48,4 +48,8 @@ angular.module("myApp").config(function($stateProvider) {
             controller: 'stateChangeController',
             controllerAs: 'vm'
         })
+        .state('questions', {
+          url: '/questions',
+          templateUrl: 'templates/questions.html'
+        })
 })
